@@ -1,0 +1,14 @@
+git pull origin master - pull new stuff from repository
+
+// before you push new stuff you have to
+git config --global user.name paramarthasaha96
+git config --global user.name paramarthasaha96
+git init
+git remote add origin https://github.com/paramarthasaha96/LibraryManagement
+git pull origin master
+
+git add .
+git commit -m "type what's changed"
+git push origin master
+
+// and you're done
