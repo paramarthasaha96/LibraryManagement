@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form Form1 
+Begin VB.Form Server 
    Caption         =   "Form1"
    ClientHeight    =   3015
    ClientLeft      =   120
@@ -10,7 +10,7 @@ Begin VB.Form Form1
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
 End
-Attribute VB_Name = "Form1"
+Attribute VB_Name = "Server"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
