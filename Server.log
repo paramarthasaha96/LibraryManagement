@@ -1,0 +1,6 @@
+Line 43: Class MSComCtl2.DTPicker of control dt_Date was not a loaded control class.
+Line 49: The property name _ExtentX in dt_Date is invalid.
+Line 50: The property name _ExtentY in dt_Date is invalid.
+Line 51: The property name _Version in dt_Date is invalid.
+Line 52: The property name Format in dt_Date is invalid.
+Line 53: The property name CurrentDate in dt_Date is invalid.
