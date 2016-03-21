@@ -1,0 +1,9 @@
+fine calculator
+notification (e-mail)
+restricted number of books, additional will cost money and will have different fine rates
+book database
+reading- token system
+membership
+Add new Book
+remove book
+change book details
