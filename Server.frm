@@ -3,7 +3,7 @@ Begin VB.Form Server
    Caption         =   "Server"
    ClientHeight    =   8580
    ClientLeft      =   225
-   ClientTop       =   855
+   ClientTop       =   870
    ClientWidth     =   14910
    LinkTopic       =   "Form1"
    ScaleHeight     =   8580
@@ -115,7 +115,26 @@ Private Sub MonthView1_DateClick(ByVal DateClicked As Date)
 
 End Sub
 
+Private Sub mn_B_Click()
+Reg_book.Show
+End Sub
+
+Private Sub mn_Ba_Click()
+View_Books.Show
+End Sub
+
 Private Sub mn_E_Click()
 Unload Me
 End Sub
 
+Private Sub mn_F_Click()
+Fines.Show
+End Sub
+
+Private Sub mn_Ru_Click()
+View_User.Show
+End Sub
+
+Private Sub mn_Us_Click()
+Reg_user.Show
+End Sub
