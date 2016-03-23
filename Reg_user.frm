@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
 Begin VB.Form Reg_user 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Register an User"
+   Caption         =   "Register a User"
    ClientHeight    =   5205
    ClientLeft      =   45
    ClientTop       =   390
@@ -22,7 +22,7 @@ Begin VB.Form Reg_user
       _ExtentX        =   2566
       _ExtentY        =   450
       _Version        =   393216
-      Format          =   98697217
+      Format          =   42270721
       CurrentDate     =   42452
    End
    Begin VB.TextBox txt_Uid 
@@ -33,14 +33,14 @@ Begin VB.Form Reg_user
       Top             =   3360
       Width           =   2415
    End
-   Begin VB.TextBox Text2 
+   Begin VB.TextBox txt_Id 
       Height          =   285
       Left            =   2160
       TabIndex        =   8
       Top             =   1920
       Width           =   4335
    End
-   Begin VB.TextBox Text1 
+   Begin VB.TextBox txt_age 
       Height          =   285
       Left            =   1440
       TabIndex        =   7

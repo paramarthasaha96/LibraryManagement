@@ -73,7 +73,9 @@ Begin VB.Form Client
       End
       Begin VB.ListBox List2 
          Height          =   1425
+         ItemData        =   "Client.frx":0000
          Left            =   120
+         List            =   "Client.frx":0002
          TabIndex        =   4
          Top             =   360
          Width           =   10455
@@ -111,7 +113,9 @@ Begin VB.Form Client
       End
       Begin VB.ListBox List1 
          Height          =   1425
+         ItemData        =   "Client.frx":0004
          Left            =   120
+         List            =   "Client.frx":0006
          TabIndex        =   2
          Top             =   360
          Width           =   10455

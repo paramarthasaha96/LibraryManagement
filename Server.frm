@@ -3,7 +3,7 @@ Begin VB.Form Server
    Caption         =   "Server"
    ClientHeight    =   8580
    ClientLeft      =   225
-   ClientTop       =   870
+   ClientTop       =   855
    ClientWidth     =   14910
    LinkTopic       =   "Form1"
    ScaleHeight     =   8580
