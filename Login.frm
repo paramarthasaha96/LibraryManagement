@@ -150,3 +150,13 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
+Private Sub co_lg_Click()
+'Play, click on options and login to test code. Add code for UID and password later
+If (op_adm.Value = True) Then
+Server.Show
+Unload Login
+ElseIf (op_us.Value = True) Then
+Client.Show
+Unload Login
+End If
+End Sub

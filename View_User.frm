@@ -1,17 +1,17 @@
 VERSION 5.00
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
-Begin VB.Form Fines 
-   Caption         =   "Fines Due"
-   ClientHeight    =   4650
+Begin VB.Form View_User 
+   Caption         =   "Users"
+   ClientHeight    =   6075
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   11385
+   ClientWidth     =   10455
    LinkTopic       =   "Form1"
-   ScaleHeight     =   4650
-   ScaleWidth      =   11385
+   ScaleHeight     =   6075
+   ScaleWidth      =   10455
    StartUpPosition =   3  'Windows Default
-   Begin VB.Frame fr_fin 
-      Caption         =   "Fines Due"
+   Begin VB.Frame fr_uv 
+      Caption         =   "LIST OF USERS"
       BeginProperty Font 
          Name            =   "Britannic Bold"
          Size            =   12
@@ -21,19 +21,53 @@ Begin VB.Form Fines
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   3615
-      Left            =   240
+      Height          =   4575
+      Left            =   360
       TabIndex        =   0
-      Top             =   240
-      Width           =   10695
-      Begin MSDataGridLib.DataGrid dg_fin 
-         Height          =   3015
-         Left            =   240
-         TabIndex        =   1
+      Top             =   360
+      Width           =   9375
+      Begin VB.OptionButton op_uid 
+         Caption         =   "USER-ID"
+         BeginProperty Font 
+            Name            =   "Britannic Bold"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   5760
+         TabIndex        =   4
          Top             =   360
-         Width           =   10215
-         _ExtentX        =   18018
-         _ExtentY        =   5318
+         Width           =   1335
+      End
+      Begin VB.OptionButton op_name 
+         Caption         =   "NAME"
+         BeginProperty Font 
+            Name            =   "Britannic Bold"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2640
+         TabIndex        =   3
+         Top             =   360
+         Width           =   975
+      End
+      Begin MSDataGridLib.DataGrid uv_dg 
+         Height          =   3615
+         Left            =   240
+         TabIndex        =   2
+         Top             =   720
+         Width           =   8895
+         _ExtentX        =   15690
+         _ExtentY        =   6376
          _Version        =   393216
          HeadLines       =   1
          RowHeight       =   15
@@ -90,9 +124,26 @@ Begin VB.Form Fines
             EndProperty
          EndProperty
       End
+      Begin VB.Label Label1 
+         Caption         =   "VIEW BY:"
+         BeginProperty Font 
+            Name            =   "Britannic Bold"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   480
+         TabIndex        =   1
+         Top             =   360
+         Width           =   1095
+      End
    End
 End
-Attribute VB_Name = "Fines"
+Attribute VB_Name = "View_User"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
