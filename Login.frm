@@ -160,3 +160,13 @@ Client.Show
 Unload Login
 End If
 End Sub
+
+Private Sub co_sgn_Click()
+If (op_adm.Value = True) Then
+'add code for registering admins
+Unload Login
+ElseIf (op_us.Value = True) Then
+Reg_user.Show
+Unload Login
+End If
+End Sub
