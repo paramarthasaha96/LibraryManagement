@@ -1,15 +1,158 @@
 VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
-Begin VB.Form Fines 
+Begin VB.Form View_Br 
    Caption         =   "Fines Due"
-   ClientHeight    =   4650
+   ClientHeight    =   6495
    ClientLeft      =   120
    ClientTop       =   450
    ClientWidth     =   11385
    LinkTopic       =   "Form1"
-   ScaleHeight     =   4650
+   ScaleHeight     =   6495
    ScaleWidth      =   11385
    StartUpPosition =   3  'Windows Default
+   Begin VB.TextBox txt_Id 
+      Height          =   285
+      Left            =   360
+      TabIndex        =   13
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   1215
+   End
+   Begin VB.OptionButton op_Id 
+      Caption         =   "ISSUE ID"
+      Height          =   255
+      Left            =   360
+      TabIndex        =   12
+      Top             =   840
+      Width           =   1215
+   End
+   Begin VB.TextBox txt_Bid 
+      Height          =   285
+      Left            =   6960
+      TabIndex        =   11
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   1455
+   End
+   Begin VB.TextBox txt_B 
+      Height          =   285
+      Left            =   5160
+      TabIndex        =   10
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   1215
+   End
+   Begin VB.TextBox txt_Uid 
+      Height          =   285
+      Left            =   3600
+      TabIndex        =   9
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   1215
+   End
+   Begin VB.TextBox txt_N 
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   8
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   1575
+   End
+   Begin VB.CommandButton co_S 
+      Caption         =   "SEARCH"
+      Height          =   375
+      Left            =   9120
+      TabIndex        =   7
+      Top             =   1680
+      Width           =   1215
+   End
+   Begin VB.OptionButton op_All 
+      Caption         =   "SHOW ALL"
+      Height          =   375
+      Left            =   9000
+      TabIndex        =   6
+      Top             =   720
+      Width           =   1335
+   End
+   Begin VB.OptionButton op_Bid 
+      Caption         =   "BOOK ID"
+      Height          =   255
+      Left            =   7080
+      TabIndex        =   5
+      Top             =   840
+      Width           =   975
+   End
+   Begin VB.OptionButton op_B 
+      Caption         =   "BOOK"
+      Height          =   375
+      Left            =   5160
+      TabIndex        =   4
+      Top             =   720
+      Width           =   855
+   End
+   Begin VB.OptionButton op_Uid 
+      Caption         =   "USER ID"
+      Height          =   195
+      Left            =   3360
+      TabIndex        =   3
+      Top             =   840
+      Width           =   975
+   End
+   Begin VB.OptionButton op_N 
+      Caption         =   "NAME"
+      Height          =   195
+      Left            =   1800
+      TabIndex        =   2
+      Top             =   840
+      Width           =   855
+   End
+   Begin MSAdodcLib.Adodc Adodc1 
+      Height          =   495
+      Left            =   1440
+      Top             =   5760
+      Width           =   2415
+      _ExtentX        =   4260
+      _ExtentY        =   873
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   8
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   ""
+      OLEDBString     =   ""
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   ""
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
    Begin VB.Frame fr_fin 
       Caption         =   "Fines Due"
       BeginProperty Font 
@@ -24,9 +167,10 @@ Begin VB.Form Fines
       Height          =   3615
       Left            =   240
       TabIndex        =   0
-      Top             =   240
+      Top             =   2040
       Width           =   10695
-      Begin MSDataGridLib.DataGrid dg_fin 
+      Begin MSDataGridLib.DataGrid dg_brw 
+         Bindings        =   "Fines.frx":0000
          Height          =   3015
          Left            =   240
          TabIndex        =   1
@@ -92,10 +236,117 @@ Begin VB.Form Fines
       End
    End
 End
-Attribute VB_Name = "Fines"
+Attribute VB_Name = "View_Br"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
+Private Sub co_S_Click()
+If op_N.Value = True Then
+Adodc1.RecordSource = "select * from Issue where NAME = '" & txt_N.Text & "' ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+ElseIf op_B.Value = True Then
+Adodc1.RecordSource = "select * from Issue where BOOK = '" & txt_B.Text & "' ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+ElseIf op_uid.Value = True Then
+Adodc1.RecordSource = "select * from Issue where UID = '" & txt_uid.Text & "' ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+ElseIf op_Bid.Value = True Then
+Adodc1.RecordSource = "select * from Issue where BID = '" & txt_Bid.Text & "' ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+ElseIf op_Id.Value = True Then
+Adodc1.RecordSource = "select * from Issue where ID = " & txt_Id.Text & " ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+ElseIf op_All.Value = True Then
+Adodc1.RecordSource = "select * from Issue ORDER BY ID ASC"
+Adodc1.Refresh
+dg_brw.Refresh
+End If
+End Sub
+
+Private Sub Form_Load()
+op_All.Value = True
+Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
+Adodc1.CommandType = adCmdText
+Adodc1.RecordSource = "select distinct ID,NAME,UID,BOOK,BID from Issue"
+Adodc1.Refresh
+With Adodc1.Recordset
+    'Do Until .EOF
+    '    Combo1.AddItem ![isbn]
+     '   Combo2.AddItem ![author]
+      '  Combo3.AddItem ![Title]
+       ' .MoveNext
+    'Loop
+    End With
+Adodc1.RecordSource = "Issue"
+End Sub
+
+Private Sub op_All_Click()
+If op_All.Value = True Then
+txt_N.Visible = False
+txt_Bid.Visible = False
+txt_uid.Visible = False
+txt_B.Visible = False
+txt_Id.Visible = False
+Adodc1.RecordSource = "select * from Issue ORDER BY ID ASC"
+'Adodc1.Refresh
+dg_brw.Refresh
+End If
+End Sub
+
+Private Sub op_B_Click()
+If op_B.Value = True Then
+txt_N.Visible = False
+txt_Bid.Visible = False
+txt_uid.Visible = False
+txt_B.Visible = True
+txt_Id.Visible = False
+End If
+End Sub
+
+Private Sub op_Bid_Click()
+If op_Bid.Value = True Then
+txt_N.Visible = False
+txt_Bid.Visible = True
+txt_uid.Visible = False
+txt_B.Visible = False
+txt_Id.Visible = False
+End If
+End Sub
+
+Private Sub op_Id_Click()
+If op_Id.Value = True Then
+txt_N.Visible = False
+txt_Bid.Visible = False
+txt_uid.Visible = False
+txt_B.Visible = False
+txt_Id.Visible = True
+End If
+End Sub
+
+Private Sub op_N_Click()
+If op_N.Value = True Then
+txt_N.Visible = True
+txt_Bid.Visible = False
+txt_uid.Visible = False
+txt_B.Visible = False
+txt_Id.Visible = False
+End If
+End Sub
+
+Private Sub op_Uid_Click()
+If op_uid.Value = True Then
+txt_N.Visible = False
+txt_Bid.Visible = False
+txt_uid.Visible = True
+txt_B.Visible = False
+txt_Id.Visible = False
+End If
+End Sub
