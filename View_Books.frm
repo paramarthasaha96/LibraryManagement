@@ -342,6 +342,14 @@ With Adodc1.Recordset
 
 Adodc1.RecordSource = "Books"
 op_All.Value = True
+'width changing code
+With bv_dg
+    .Columns(0).Width = 1000
+    .Columns(1).Width = 3050
+    .Columns(2).Width = 2400
+    .Columns(3).Width = 1200
+    .Columns(4).Width = 1095
+End With
 End Sub
 
 Private Sub op_All_Click()

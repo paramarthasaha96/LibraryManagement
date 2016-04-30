@@ -1,10 +1,11 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Server 
+   BackColor       =   &H00FAF2BA&
    Caption         =   "Server"
    ClientHeight    =   8580
    ClientLeft      =   225
-   ClientTop       =   870
+   ClientTop       =   855
    ClientWidth     =   14910
    LinkTopic       =   "Form1"
    ScaleHeight     =   8580
@@ -105,6 +106,7 @@ Begin VB.Form Server
       _Version        =   393216
    End
    Begin VB.Frame fr_Iss 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "ISSUE A BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -233,9 +235,10 @@ Begin VB.Form Server
       Begin VB.TextBox txt_Di 
          Height          =   285
          Left            =   3000
+         Locked          =   -1  'True
          TabIndex        =   14
          Top             =   3120
-         Width           =   1815
+         Width           =   1095
       End
       Begin VB.TextBox txt_Nb 
          DataSource      =   "Adodc2"
@@ -428,6 +431,7 @@ Begin VB.Form Server
       End
    End
    Begin VB.Frame fr_Re 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "RETURN A BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -503,7 +507,7 @@ Begin VB.Form Server
          Left            =   2760
          TabIndex        =   36
          Top             =   3720
-         Width           =   1575
+         Width           =   1095
       End
       Begin VB.TextBox txt_Nbr 
          DataSource      =   "Adodc4"
@@ -686,6 +690,7 @@ Begin VB.Form Server
       End
    End
    Begin VB.Frame fr_Cur 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "CURRENTLY READING"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -833,6 +838,12 @@ txt_Idur = ""
 txt_Idbr = ""
 txt_Nur = ""
 txt_Nbr = ""
+
+'code for date
+Dim dt As Date
+dt = DateValue(Now)
+txt_Di.Text = dt
+txt_Dr.Text = dt
 
 End Sub
 
