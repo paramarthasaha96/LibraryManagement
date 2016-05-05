@@ -7,6 +7,15 @@ Begin VB.Form View_User
    ClientLeft      =   12315
    ClientTop       =   4635
    ClientWidth     =   10455
+   BeginProperty Font 
+      Name            =   "Britannic Bold"
+      Size            =   8.25
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    LinkTopic       =   "Form1"
    ScaleHeight     =   6075
    ScaleWidth      =   10455
@@ -108,6 +117,15 @@ Begin VB.Form View_User
          Width           =   1575
       End
       Begin VB.TextBox txt_Id 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   5280
          TabIndex        =   6
@@ -116,6 +134,15 @@ Begin VB.Form View_User
          Width           =   1935
       End
       Begin VB.TextBox txt_Name 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   2760
          TabIndex        =   5
@@ -169,7 +196,7 @@ Begin VB.Form View_User
          _Version        =   393216
          Enabled         =   -1  'True
          HeadLines       =   1
-         RowHeight       =   15
+         RowHeight       =   17
          BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -180,8 +207,8 @@ Begin VB.Form View_User
             Strikethrough   =   0   'False
          EndProperty
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Britannic Bold"
+            Size            =   9
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -267,12 +294,27 @@ End If
 End Sub
 
 Private Sub Form_Load()
-op_All.Value = True
 Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc1.CommandType = adCmdText
 Adodc1.RecordSource = "select distinct ID,EMAIL,NAME,AGE from Users"
 Adodc1.Refresh
+With Adodc1.Recordset
+    Do Until .EOF
+    '    Combo1.AddItem ![isbn]
+     '   Combo2.AddItem ![author]
+      '  Combo3.AddItem ![Title]
+        .MoveNext
+    Loop
+    End With
 Adodc1.RecordSource = "Users"
+op_All.Value = True
+'width changing code
+With uv_dg
+    .Columns(0).Width = 1500
+    .Columns(1).Width = 3700
+    .Columns(2).Width = 2045
+    .Columns(3).Width = 1350
+End With
 End Sub
 
 Private Sub op_All_Click()

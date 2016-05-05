@@ -7,6 +7,15 @@ Begin VB.Form View_Books
    ClientLeft      =   2805
    ClientTop       =   1935
    ClientWidth     =   10710
+   BeginProperty Font 
+      Name            =   "Britannic Bold"
+      Size            =   8.25
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    LinkTopic       =   "Form1"
    ScaleHeight     =   5985
    ScaleWidth      =   10710
@@ -108,6 +117,15 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin VB.TextBox txt_Aut 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   6840
          TabIndex        =   10
@@ -116,6 +134,15 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin VB.TextBox txt_Qty 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   5160
          TabIndex        =   9
@@ -125,6 +152,15 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin VB.TextBox txt_Name 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   3600
          TabIndex        =   8
@@ -133,6 +169,15 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin VB.TextBox txt_Bid 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Left            =   2040
          TabIndex        =   7
@@ -221,7 +266,7 @@ Begin VB.Form View_Books
          AllowUpdate     =   0   'False
          Enabled         =   0   'False
          HeadLines       =   1
-         RowHeight       =   15
+         RowHeight       =   17
          BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -232,8 +277,8 @@ Begin VB.Form View_Books
             Strikethrough   =   0   'False
          EndProperty
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Britannic Bold"
+            Size            =   9
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False

@@ -7,11 +7,29 @@ Begin VB.Form View_Br
    ClientLeft      =   120
    ClientTop       =   450
    ClientWidth     =   11385
+   BeginProperty Font 
+      Name            =   "Britannic Bold"
+      Size            =   8.25
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    LinkTopic       =   "Form1"
    ScaleHeight     =   6495
    ScaleWidth      =   11385
    StartUpPosition =   3  'Windows Default
    Begin VB.TextBox txt_Id 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   360
       TabIndex        =   13
@@ -21,21 +39,48 @@ Begin VB.Form View_Br
    End
    Begin VB.OptionButton op_Id 
       Caption         =   "ISSUE ID"
-      Height          =   255
-      Left            =   360
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   240
       TabIndex        =   12
-      Top             =   840
-      Width           =   1215
+      Top             =   720
+      Width           =   1335
    End
    Begin VB.TextBox txt_Bid 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
-      Left            =   6960
+      Left            =   6600
       TabIndex        =   11
       Top             =   1320
       Visible         =   0   'False
       Width           =   1455
    End
    Begin VB.TextBox txt_B 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
       Left            =   5160
       TabIndex        =   10
@@ -44,16 +89,34 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.TextBox txt_Uid 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
-      Left            =   3600
+      Left            =   3720
       TabIndex        =   9
       Top             =   1320
       Visible         =   0   'False
       Width           =   1215
    End
    Begin VB.TextBox txt_N 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   285
-      Left            =   1680
+      Left            =   1800
       TabIndex        =   8
       Top             =   1320
       Visible         =   0   'False
@@ -61,51 +124,105 @@ Begin VB.Form View_Br
    End
    Begin VB.CommandButton co_S 
       Caption         =   "SEARCH"
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   375
-      Left            =   9120
+      Left            =   9000
       TabIndex        =   7
       Top             =   1680
       Width           =   1215
    End
    Begin VB.OptionButton op_All 
       Caption         =   "SHOW ALL"
-      Height          =   375
-      Left            =   9000
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   8760
       TabIndex        =   6
-      Top             =   720
-      Width           =   1335
+      Top             =   840
+      Width           =   1575
    End
    Begin VB.OptionButton op_Bid 
       Caption         =   "BOOK ID"
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
-      Left            =   7080
+      Left            =   6720
       TabIndex        =   5
       Top             =   840
-      Width           =   975
+      Width           =   1455
    End
    Begin VB.OptionButton op_B 
       Caption         =   "BOOK"
-      Height          =   375
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
       Left            =   5160
       TabIndex        =   4
-      Top             =   720
-      Width           =   855
+      Top             =   840
+      Width           =   1215
    End
    Begin VB.OptionButton op_Uid 
       Caption         =   "USER ID"
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   195
-      Left            =   3360
+      Left            =   3600
       TabIndex        =   3
       Top             =   840
-      Width           =   975
+      Width           =   1215
    End
    Begin VB.OptionButton op_N 
       Caption         =   "NAME"
-      Height          =   195
-      Left            =   1800
+      BeginProperty Font 
+         Name            =   "Britannic Bold"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   2160
       TabIndex        =   2
-      Top             =   840
-      Width           =   855
+      Top             =   780
+      Width           =   1095
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   495
@@ -180,9 +297,9 @@ Begin VB.Form View_Br
          _ExtentY        =   5318
          _Version        =   393216
          HeadLines       =   1
-         RowHeight       =   15
+         RowHeight       =   17
          BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Britannic Bold"
             Size            =   8.25
             Charset         =   0
             Weight          =   400
@@ -191,8 +308,8 @@ Begin VB.Form View_Br
             Strikethrough   =   0   'False
          EndProperty
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Britannic Bold"
+            Size            =   9
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -286,6 +403,14 @@ With Adodc1.Recordset
     'Loop
     End With
 Adodc1.RecordSource = "Issue"
+'width changing code
+With dg_brw
+    .Columns(0).Width = 1150
+    .Columns(1).Width = 3550
+    .Columns(2).Width = 1200
+    .Columns(3).Width = 2900
+    .Columns(4).Width = 1265
+End With
 End Sub
 
 Private Sub op_All_Click()
