@@ -353,22 +353,39 @@ Adodc1.Refresh
 bv_dg.Refresh
 
 ElseIf op_Bid.Value = True Then
+If Not (txt_Bid.Text = "") Then
 Adodc1.RecordSource = "select * from BOOKS where ID =" & txt_Bid.Text & " ORDER BY ID ASC"
 Adodc1.Refresh
 bv_dg.Refresh
+End If
+
 ElseIf op_Aut.Value = True Then
+If Not (txt_Aut.Text = "") Then
 Adodc1.RecordSource = "select * from BOOKS where AUTHOR = '" & txt_Aut.Text & "' ORDER BY ID ASC"
 Adodc1.Refresh
 bv_dg.Refresh
+End If
+
 ElseIf op_Qty.Value = True Then
+If Not (txt_Qty.Text = "") Then
 Adodc1.RecordSource = "select * from BOOKS where QUANTITY =" & txt_Qty.Text & " ORDER BY ID ASC"
 Adodc1.Refresh
 bv_dg.Refresh
+End If
+
 ElseIf op_All.Value = True Then
 Adodc1.RecordSource = "select * from BOOKS ORDER BY ID ASC"
 Adodc1.Refresh
 bv_dg.Refresh
 End If
+'width changing code
+With bv_dg
+    .Columns(0).Width = 1000
+    .Columns(1).Width = 3050
+    .Columns(2).Width = 2400
+    .Columns(3).Width = 1200
+    .Columns(4).Width = 1095
+End With
 End Sub
 
 Private Sub Form_Load()
@@ -406,6 +423,14 @@ txt_Aut.Visible = False
 Adodc1.RecordSource = "select * from BOOKS ORDER BY ID ASC"
 Adodc1.Refresh
 bv_dg.Refresh
+'width changing code
+With bv_dg
+    .Columns(0).Width = 1000
+    .Columns(1).Width = 3050
+    .Columns(2).Width = 2400
+    .Columns(3).Width = 1200
+    .Columns(4).Width = 1095
+End With
 End If
 End Sub
 

@@ -378,14 +378,24 @@ Adodc1.RecordSource = "select * from Issue where BID = '" & txt_Bid.Text & "' OR
 Adodc1.Refresh
 dg_brw.Refresh
 ElseIf op_Id.Value = True Then
+If Not (txt_Id.Text = "") Then
 Adodc1.RecordSource = "select * from Issue where ID = " & txt_Id.Text & " ORDER BY ID ASC"
 Adodc1.Refresh
 dg_brw.Refresh
+End If
 ElseIf op_All.Value = True Then
 Adodc1.RecordSource = "select * from Issue ORDER BY ID ASC"
 Adodc1.Refresh
 dg_brw.Refresh
 End If
+'width changing code
+With dg_brw
+    .Columns(0).Width = 1150
+    .Columns(1).Width = 3550
+    .Columns(2).Width = 1200
+    .Columns(3).Width = 2900
+    .Columns(4).Width = 1265
+End With
 End Sub
 
 Private Sub Form_Load()
@@ -409,7 +419,7 @@ With dg_brw
     .Columns(1).Width = 3550
     .Columns(2).Width = 1200
     .Columns(3).Width = 2900
-    .Columns(4).Width = 1265
+    .Columns(4).Width = 1235
 End With
 End Sub
 

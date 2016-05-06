@@ -4,8 +4,8 @@ Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form View_User 
    Caption         =   "Users"
    ClientHeight    =   6075
-   ClientLeft      =   12315
-   ClientTop       =   4635
+   ClientLeft      =   3585
+   ClientTop       =   1890
    ClientWidth     =   10455
    BeginProperty Font 
       Name            =   "Britannic Bold"
@@ -279,18 +279,32 @@ Option Explicit
 
 Private Sub co_S_Click()
 If op_name.Value = True Then
+If Not (txt_Name.Text = "") Then
 Adodc1.RecordSource = "select * from Users where Name = '" & txt_Name.Text & "' ORDER BY ID ASC"
 Adodc1.Refresh
 uv_dg.Refresh
-ElseIf op_All.Value = True Then
-Adodc1.RecordSource = "select * from Users ORDER BY ID ASC"
-Adodc1.Refresh
-uv_dg.Refresh
+End If
+
+
 ElseIf op_uid.Value = True Then
+If Not (txt_Id.Text = "") Then
 Adodc1.RecordSource = "select * from Users where ID =" & txt_Id.Text & " ORDER BY ID ASC"
 Adodc1.Refresh
 uv_dg.Refresh
 End If
+
+ElseIf op_All.Value = True Then
+Adodc1.RecordSource = "select * from Users ORDER BY ID ASC"
+Adodc1.Refresh
+uv_dg.Refresh
+End If
+'width changing code
+With uv_dg
+    .Columns(0).Width = 1500
+    .Columns(1).Width = 3700
+    .Columns(2).Width = 2045
+    .Columns(3).Width = 1350
+End With
 End Sub
 
 Private Sub Form_Load()
@@ -325,6 +339,13 @@ Adodc1.RecordSource = "select * from USERS ORDER BY ID ASC"
 Adodc1.Refresh
 uv_dg.Refresh
 End If
+'width changing code
+With uv_dg
+    .Columns(0).Width = 1500
+    .Columns(1).Width = 3700
+    .Columns(2).Width = 2045
+    .Columns(3).Width = 1350
+End With
 End Sub
 
 Private Sub op_Name_Click()
