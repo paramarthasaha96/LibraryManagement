@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form View_Books 
+   BackColor       =   &H00FAF2BA&
    Caption         =   "Books"
    ClientHeight    =   5985
    ClientLeft      =   2805
@@ -67,6 +68,7 @@ Begin VB.Form View_Books
       _Version        =   393216
    End
    Begin VB.Frame fr_bv 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "List of Books"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -83,6 +85,7 @@ Begin VB.Form View_Books
       Top             =   360
       Width           =   9975
       Begin VB.CommandButton co_S 
+         BackColor       =   &H80000004&
          Caption         =   "SEARCH"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -95,11 +98,13 @@ Begin VB.Form View_Books
          EndProperty
          Height          =   495
          Left            =   8400
+         Style           =   1  'Graphical
          TabIndex        =   12
          Top             =   840
          Width           =   1455
       End
       Begin VB.OptionButton op_All 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "SHOW ALL"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -186,6 +191,7 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin VB.OptionButton op_Aut 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "AUTHOR"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -203,6 +209,7 @@ Begin VB.Form View_Books
          Width           =   1335
       End
       Begin VB.OptionButton op_Qty 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "QUANTITY"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -220,6 +227,7 @@ Begin VB.Form View_Books
          Width           =   1575
       End
       Begin VB.OptionButton op_Name 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "NAME"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -237,6 +245,7 @@ Begin VB.Form View_Books
          Width           =   975
       End
       Begin VB.OptionButton op_Bid 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "BOOK ID"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -321,6 +330,7 @@ Begin VB.Form View_Books
          EndProperty
       End
       Begin VB.Label lb_view 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "VIEW BY:"
          BeginProperty Font 
             Name            =   "Britannic Bold"

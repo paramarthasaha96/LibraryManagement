@@ -191,6 +191,7 @@ Begin VB.Form Server
          _Version        =   393216
       End
       Begin VB.CommandButton co_Issue 
+         BackColor       =   &H80000004&
          Caption         =   "ISSUE"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -203,11 +204,13 @@ Begin VB.Form Server
          EndProperty
          Height          =   375
          Left            =   4920
+         Style           =   1  'Graphical
          TabIndex        =   27
          Top             =   4320
          Width           =   1695
       End
       Begin VB.OptionButton Option2 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Option2"
          Height          =   255
          Left            =   3240
@@ -216,6 +219,7 @@ Begin VB.Form Server
          Width           =   255
       End
       Begin VB.OptionButton Option1 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Option1"
          Height          =   195
          Left            =   1680
@@ -278,6 +282,7 @@ Begin VB.Form Server
          Width           =   1815
       End
       Begin VB.Label lb_B 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "BORROW"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -295,6 +300,7 @@ Begin VB.Form Server
          Width           =   1815
       End
       Begin VB.Label lb_Cr 
+         BackStyle       =   0  'Transparent
          Caption         =   "READING"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -312,6 +318,7 @@ Begin VB.Form Server
          Width           =   2055
       End
       Begin VB.Label lb_St 
+         BackStyle       =   0  'Transparent
          Caption         =   "STATUS :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -329,6 +336,7 @@ Begin VB.Form Server
          Width           =   975
       End
       Begin VB.Label lb_Iid 
+         BackStyle       =   0  'Transparent
          Caption         =   "ISSUE ID GENERATED :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -346,6 +354,7 @@ Begin VB.Form Server
          Width           =   2535
       End
       Begin VB.Label lb_Di 
+         BackStyle       =   0  'Transparent
          Caption         =   "DATE OF ISSUE :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -363,6 +372,7 @@ Begin VB.Form Server
          Width           =   2175
       End
       Begin VB.Label lb_Nb 
+         BackStyle       =   0  'Transparent
          Caption         =   "NAME OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -380,6 +390,7 @@ Begin VB.Form Server
          Width           =   2415
       End
       Begin VB.Label lb_Idb 
+         BackStyle       =   0  'Transparent
          Caption         =   "ID OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -397,6 +408,7 @@ Begin VB.Form Server
          Width           =   2295
       End
       Begin VB.Label lb_Nu 
+         BackStyle       =   0  'Transparent
          Caption         =   "NAME OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -414,6 +426,7 @@ Begin VB.Form Server
          Width           =   2535
       End
       Begin VB.Label lb_Idu 
+         BackStyle       =   0  'Transparent
          Caption         =   "ID OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -448,6 +461,15 @@ Begin VB.Form Server
       TabIndex        =   1
       Top             =   3360
       Width           =   7335
+      Begin VB.TextBox txt_brd 
+         DataSource      =   "Adodc4"
+         Height          =   285
+         Left            =   5160
+         Locked          =   -1  'True
+         TabIndex        =   39
+         Top             =   2520
+         Width           =   1455
+      End
       Begin MSAdodcLib.Adodc Adodc2 
          Height          =   375
          Left            =   2880
@@ -499,6 +521,7 @@ Begin VB.Form Server
          Enabled         =   0   'False
          Height          =   285
          Left            =   2760
+         Locked          =   -1  'True
          TabIndex        =   35
          Top             =   4320
          Width           =   1575
@@ -571,6 +594,7 @@ Begin VB.Form Server
          Width           =   1455
       End
       Begin VB.Label lb_Idbr 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "ID OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -588,6 +612,7 @@ Begin VB.Form Server
          Width           =   1935
       End
       Begin VB.Label lb_Idur 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "ID OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -605,6 +630,7 @@ Begin VB.Form Server
          Width           =   1935
       End
       Begin VB.Label lb_F 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "FINE TO BE PAID :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -622,6 +648,7 @@ Begin VB.Form Server
          Width           =   2055
       End
       Begin VB.Label lb_Dr 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "DATE OF RETURN :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -639,6 +666,7 @@ Begin VB.Form Server
          Width           =   2175
       End
       Begin VB.Label lb_Nbr 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "NAME OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -656,6 +684,7 @@ Begin VB.Form Server
          Width           =   2295
       End
       Begin VB.Label lb_Nur 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "NAME OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -673,6 +702,7 @@ Begin VB.Form Server
          Width           =   2295
       End
       Begin VB.Label lb_Rid 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "ISSUE ID :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -858,6 +888,20 @@ txt_Idur = ""
 txt_Idbr = ""
 txt_Nur = ""
 txt_Nbr = ""
+
+'code for Currently Reading
+Adodc3.RecordSource = "select * from ISSUE where STATUS = 'C' ORDER BY ID ASC"
+Adodc3.Refresh
+Dg_cr.Refresh
+With Dg_cr
+    .Columns(6).Visible = False
+    .Columns(0).Width = 1000
+    .Columns(1).Width = 5500
+    .Columns(2).Width = 1000
+    .Columns(3).Width = 4650
+    .Columns(4).Width = 1200
+    .Columns(5).Visible = False
+End With
 End Sub
 
 Private Sub Form_Load()
@@ -876,17 +920,24 @@ txt_Nb.DataField = "NAME"
 Adodc2.RecordSource = "Books"
 txt_Nb = ""
 
+'adodc code for currently reading
+Adodc3.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
+Adodc3.CommandType = adCmdText
+Adodc3.RecordSource = "select distinct ID,NAME,UID,BOOK,BID,STATUS from Issue"
+Adodc3.Refresh
+
 Adodc4.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc4.CommandType = adCmdText
-Adodc4.RecordSource = "select distinct ID,NAME,UID,BOOK,BID,STATUS from Issue"
+Adodc4.RecordSource = "select distinct ID,NAME,UID,BOOK,BID,STATUS,BORROW_DATE from Issue"
 Adodc4.Refresh
 
 txt_Idur.DataField = "UID"
 txt_Idbr.DataField = "BID"
 txt_Nur.DataField = "NAME"
 txt_Nbr.DataField = "BOOK"
+txt_brd.DataField = "BORROW_DATE"
 Adodc4.RecordSource = "Issue"
-Adodc3.Recordset.AddNew
+Adodc4.Recordset.AddNew
 txt_Idur = ""
 txt_Idbr = ""
 txt_Nur = ""
@@ -899,17 +950,17 @@ txt_Di.Text = dt
 txt_Dr.Text = dt
 
 'code for Currently Reading
-Adodc4.RecordSource = "select * from ISSUE where STATUS = 'C' ORDER BY ID ASC"
-Adodc4.Refresh
+Adodc3.RecordSource = "select * from ISSUE where STATUS = 'C' ORDER BY ID ASC"
+Adodc3.Refresh
 Dg_cr.Refresh
 With Dg_cr
     .Columns(6).Visible = False
     .Columns(0).Width = 1000
-    .Columns(1).Width = 5000
+    .Columns(1).Width = 5500
     .Columns(2).Width = 1000
-    .Columns(3).Width = 4000
+    .Columns(3).Width = 4650
     .Columns(4).Width = 1200
-    .Columns(5).Width = 1170
+    .Columns(5).Visible = False
 End With
 
 End Sub
@@ -965,6 +1016,35 @@ End If
 End Sub
 
 Private Sub txt_Rid_LostFocus()
+If Not (txt_Rid = "") Then
 Adodc4.RecordSource = "select * from Issue where ID =" & txt_Rid.Text
 Adodc4.Refresh
+'Update Currently Reading list
+Adodc3.Refresh
+Dg_cr.Refresh
+With Dg_cr
+    .Columns(6).Visible = False
+    .Columns(0).Width = 1000
+    .Columns(1).Width = 5500
+    .Columns(2).Width = 1000
+    .Columns(3).Width = 4650
+    .Columns(4).Width = 1200
+    .Columns(5).Visible = False
+End With
+
+'fine calculation
+Dim db, dr As Date
+Dim dd As Integer
+dr = txt_Dr.Text
+db = txt_brd.Text
+dd = DateDiff("d", db, dr)
+If (dd <= 30) Then
+dd = 0
+ElseIf (dd > 30 And dd <= 60) Then
+dd = (dd - 30) * 2
+ElseIf (dd > 60) Then
+dd = 60 + 5 * (dd - 60)
+End If
+txt_F = dd
+End If
 End Sub

@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form View_Br 
+   BackColor       =   &H00FAF2BA&
    Caption         =   "Fines Due"
    ClientHeight    =   6495
    ClientLeft      =   120
@@ -38,6 +39,7 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.OptionButton op_Id 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "ISSUE ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -136,10 +138,11 @@ Begin VB.Form View_Br
       Height          =   375
       Left            =   9000
       TabIndex        =   7
-      Top             =   1680
+      Top             =   1320
       Width           =   1215
    End
    Begin VB.OptionButton op_All 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "SHOW ALL"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -157,6 +160,7 @@ Begin VB.Form View_Br
       Width           =   1575
    End
    Begin VB.OptionButton op_Bid 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "BOOK ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -174,6 +178,7 @@ Begin VB.Form View_Br
       Width           =   1455
    End
    Begin VB.OptionButton op_B 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -191,6 +196,7 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.OptionButton op_Uid 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "USER ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -201,13 +207,14 @@ Begin VB.Form View_Br
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   195
+      Height          =   255
       Left            =   3600
       TabIndex        =   3
-      Top             =   840
+      Top             =   780
       Width           =   1215
    End
    Begin VB.OptionButton op_N 
+      BackColor       =   &H00FAF2BA&
       Caption         =   "NAME"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -271,6 +278,7 @@ Begin VB.Form View_Br
       _Version        =   393216
    End
    Begin VB.Frame fr_fin 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Fines Due"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -296,6 +304,7 @@ Begin VB.Form View_Br
          _ExtentX        =   18018
          _ExtentY        =   5318
          _Version        =   393216
+         BackColor       =   16777215
          HeadLines       =   1
          RowHeight       =   17
          BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 

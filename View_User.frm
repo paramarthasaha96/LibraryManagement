@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form View_User 
+   BackColor       =   &H00FAF2BA&
    Caption         =   "Users"
    ClientHeight    =   6075
    ClientLeft      =   3585
@@ -67,6 +68,7 @@ Begin VB.Form View_User
       _Version        =   393216
    End
    Begin VB.Frame fr_uv 
+      BackColor       =   &H00FFC0C0&
       Caption         =   "LIST OF USERS"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -100,6 +102,7 @@ Begin VB.Form View_User
          Width           =   1455
       End
       Begin VB.OptionButton op_All 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "SHOW ALL"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -151,6 +154,7 @@ Begin VB.Form View_User
          Width           =   1935
       End
       Begin VB.OptionButton op_uid 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "USER-ID"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -168,6 +172,7 @@ Begin VB.Form View_User
          Width           =   1335
       End
       Begin VB.OptionButton op_name 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "NAME"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -252,6 +257,7 @@ Begin VB.Form View_User
          EndProperty
       End
       Begin VB.Label Label1 
+         BackColor       =   &H00FFC0C0&
          Caption         =   "VIEW BY:"
          BeginProperty Font 
             Name            =   "Britannic Bold"
