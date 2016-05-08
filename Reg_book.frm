@@ -10,6 +10,7 @@ Begin VB.Form Reg_book
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   Picture         =   "Reg_book.frx":0000
    ScaleHeight     =   5400
    ScaleWidth      =   6885
    StartUpPosition =   3  'Windows Default
@@ -90,6 +91,7 @@ Begin VB.Form Reg_book
       Width           =   2655
    End
    Begin VB.ComboBox cb_Cat 
+      BackColor       =   &H00C0E0FF&
       BeginProperty Font 
          Name            =   "Britannic Bold"
          Size            =   12
@@ -100,9 +102,9 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      ItemData        =   "Reg_book.frx":0000
+      ItemData        =   "Reg_book.frx":666AE
       Left            =   2040
-      List            =   "Reg_book.frx":0016
+      List            =   "Reg_book.frx":666C4
       Style           =   2  'Dropdown List
       TabIndex        =   7
       Top             =   2160
@@ -127,6 +129,7 @@ Begin VB.Form Reg_book
       Width           =   5175
    End
    Begin VB.CommandButton co_Register 
+      BackColor       =   &H0000C000&
       Caption         =   "REGISTER"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -139,11 +142,13 @@ Begin VB.Form Reg_book
       EndProperty
       Height          =   495
       Left            =   4320
+      Style           =   1  'Graphical
       TabIndex        =   4
       Top             =   4560
       Width           =   2415
    End
    Begin VB.Label lb_Qt 
+      BackColor       =   &H00C0E0FF&
       Caption         =   "QUANTITY :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -155,12 +160,13 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   480
+      Left            =   360
       TabIndex        =   10
       Top             =   3000
       Width           =   1215
    End
    Begin VB.Label lb_Bid 
+      BackColor       =   &H00C0E0FF&
       Caption         =   "UNIQUE BOOK ID GENERATED :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -172,12 +178,13 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   480
+      Left            =   360
       TabIndex        =   3
       Top             =   3720
       Width           =   3495
    End
    Begin VB.Label lb_Aut 
+      BackColor       =   &H00C0E0FF&
       Caption         =   "AUTHOR NAME :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -189,12 +196,13 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   480
+      Left            =   360
       TabIndex        =   2
       Top             =   1560
       Width           =   1815
    End
    Begin VB.Label lb_Cat 
+      BackColor       =   &H00C0E0FF&
       Caption         =   "CATEGORY :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -206,12 +214,13 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   480
+      Left            =   360
       TabIndex        =   1
       Top             =   2280
       Width           =   1335
    End
    Begin VB.Label lb_Name 
+      BackColor       =   &H00C0E0FF&
       Caption         =   "NAME :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -223,7 +232,7 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   480
+      Left            =   360
       TabIndex        =   0
       Top             =   840
       Width           =   975

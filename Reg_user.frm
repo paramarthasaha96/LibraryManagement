@@ -10,6 +10,7 @@ Begin VB.Form Reg_user
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   Picture         =   "Reg_user.frx":0000
    ScaleHeight     =   4230
    ScaleWidth      =   6795
    StartUpPosition =   3  'Windows Default
@@ -100,6 +101,7 @@ Begin VB.Form Reg_user
       Width           =   5055
    End
    Begin VB.CommandButton co_Register 
+      BackColor       =   &H0000C000&
       Caption         =   "REGISTER"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -112,11 +114,13 @@ Begin VB.Form Reg_user
       EndProperty
       Height          =   495
       Left            =   4200
+      Style           =   1  'Graphical
       TabIndex        =   0
       Top             =   3360
       Width           =   2415
    End
    Begin VB.Label lb_Uid 
+      BackColor       =   &H0080C0FF&
       Caption         =   "UNIQUE GENERATED ID (U-ID) :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -135,6 +139,7 @@ Begin VB.Form Reg_user
       Width           =   3495
    End
    Begin VB.Label lb_Eid 
+      BackColor       =   &H0080C0FF&
       Caption         =   "EMAIL ID :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -152,6 +157,7 @@ Begin VB.Form Reg_user
       Width           =   1215
    End
    Begin VB.Label lb_Age 
+      BackColor       =   &H0080C0FF&
       Caption         =   "AGE :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -169,6 +175,7 @@ Begin VB.Form Reg_user
       Width           =   855
    End
    Begin VB.Label lb_Name 
+      BackColor       =   &H0080C0FF&
       Caption         =   "NAME :"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -195,7 +202,7 @@ Attribute VB_Exposed = False
 Private Sub co_Register_Click()
    Adodc1.Recordset.Update
    Adodc1.Recordset.MoveLast
-   MsgBox ("THANKS FOR REGISTERING! Your ID NUMBER IS " & txt_uid.Text)
+   MsgBox ("THANKS FOR REGISTERING! Your ID NUMBER IS " & txt_Uid.Text)
    Adodc1.Recordset.AddNew
    
    

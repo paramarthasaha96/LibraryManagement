@@ -3,7 +3,7 @@ Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form View_Br 
    BackColor       =   &H00FAF2BA&
-   Caption         =   "Fines Due"
+   Caption         =   "Users who Borrowed"
    ClientHeight    =   6495
    ClientLeft      =   120
    ClientTop       =   450
@@ -18,6 +18,7 @@ Begin VB.Form View_Br
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form1"
+   Picture         =   "Fines.frx":0000
    ScaleHeight     =   6495
    ScaleWidth      =   11385
    StartUpPosition =   3  'Windows Default
@@ -39,7 +40,7 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.OptionButton op_Id 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "ISSUE ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -125,6 +126,7 @@ Begin VB.Form View_Br
       Width           =   1575
    End
    Begin VB.CommandButton co_S 
+      BackColor       =   &H0000C000&
       Caption         =   "SEARCH"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -137,12 +139,13 @@ Begin VB.Form View_Br
       EndProperty
       Height          =   375
       Left            =   9000
+      Style           =   1  'Graphical
       TabIndex        =   7
       Top             =   1320
       Width           =   1215
    End
    Begin VB.OptionButton op_All 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "SHOW ALL"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -160,7 +163,7 @@ Begin VB.Form View_Br
       Width           =   1575
    End
    Begin VB.OptionButton op_Bid 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "BOOK ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -178,7 +181,7 @@ Begin VB.Form View_Br
       Width           =   1455
    End
    Begin VB.OptionButton op_B 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -196,7 +199,7 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.OptionButton op_Uid 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "USER ID"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -214,7 +217,7 @@ Begin VB.Form View_Br
       Width           =   1215
    End
    Begin VB.OptionButton op_N 
-      BackColor       =   &H00FAF2BA&
+      BackColor       =   &H0080C0FF&
       Caption         =   "NAME"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -278,7 +281,7 @@ Begin VB.Form View_Br
       _Version        =   393216
    End
    Begin VB.Frame fr_fin 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H0080C0FF&
       Caption         =   "Fines Due"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -295,7 +298,7 @@ Begin VB.Form View_Br
       Top             =   2040
       Width           =   10695
       Begin MSDataGridLib.DataGrid dg_brw 
-         Bindings        =   "Fines.frx":0000
+         Bindings        =   "Fines.frx":406B8
          Height          =   3015
          Left            =   240
          TabIndex        =   1
@@ -379,7 +382,7 @@ Adodc1.RecordSource = "select * from Issue where BOOK = '" & txt_B.Text & "' ORD
 Adodc1.Refresh
 dg_brw.Refresh
 ElseIf op_uid.Value = True Then
-Adodc1.RecordSource = "select * from Issue where UID = '" & txt_uid.Text & "' ORDER BY ID ASC"
+Adodc1.RecordSource = "select * from Issue where UID = '" & txt_Uid.Text & "' ORDER BY ID ASC"
 Adodc1.Refresh
 dg_brw.Refresh
 ElseIf op_Bid.Value = True Then
@@ -436,7 +439,7 @@ Private Sub op_All_Click()
 If op_All.Value = True Then
 txt_N.Visible = False
 txt_Bid.Visible = False
-txt_uid.Visible = False
+txt_Uid.Visible = False
 txt_B.Visible = False
 txt_Id.Visible = False
 Adodc1.RecordSource = "select * from Issue ORDER BY ID ASC"
@@ -449,7 +452,7 @@ Private Sub op_B_Click()
 If op_B.Value = True Then
 txt_N.Visible = False
 txt_Bid.Visible = False
-txt_uid.Visible = False
+txt_Uid.Visible = False
 txt_B.Visible = True
 txt_Id.Visible = False
 End If
@@ -459,7 +462,7 @@ Private Sub op_Bid_Click()
 If op_Bid.Value = True Then
 txt_N.Visible = False
 txt_Bid.Visible = True
-txt_uid.Visible = False
+txt_Uid.Visible = False
 txt_B.Visible = False
 txt_Id.Visible = False
 End If
@@ -469,7 +472,7 @@ Private Sub op_Id_Click()
 If op_Id.Value = True Then
 txt_N.Visible = False
 txt_Bid.Visible = False
-txt_uid.Visible = False
+txt_Uid.Visible = False
 txt_B.Visible = False
 txt_Id.Visible = True
 End If
@@ -479,7 +482,7 @@ Private Sub op_N_Click()
 If op_N.Value = True Then
 txt_N.Visible = True
 txt_Bid.Visible = False
-txt_uid.Visible = False
+txt_Uid.Visible = False
 txt_B.Visible = False
 txt_Id.Visible = False
 End If
@@ -489,7 +492,7 @@ Private Sub op_Uid_Click()
 If op_uid.Value = True Then
 txt_N.Visible = False
 txt_Bid.Visible = False
-txt_uid.Visible = True
+txt_Uid.Visible = True
 txt_B.Visible = False
 txt_Id.Visible = False
 End If

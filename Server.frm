@@ -8,7 +8,10 @@ Begin VB.Form Server
    ClientLeft      =   225
    ClientTop       =   855
    ClientWidth     =   14910
+   FillStyle       =   0  'Solid
+   FontTransparent =   0   'False
    LinkTopic       =   "Form1"
+   Picture         =   "Server.frx":0000
    ScaleHeight     =   8580
    ScaleWidth      =   14910
    StartUpPosition =   3  'Windows Default
@@ -107,7 +110,7 @@ Begin VB.Form Server
       _Version        =   393216
    End
    Begin VB.Frame fr_Iss 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H0080C0FF&
       Caption         =   "ISSUE A BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -191,7 +194,7 @@ Begin VB.Form Server
          _Version        =   393216
       End
       Begin VB.CommandButton co_Issue 
-         BackColor       =   &H80000004&
+         BackColor       =   &H0000C000&
          Caption         =   "ISSUE"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -210,7 +213,7 @@ Begin VB.Form Server
          Width           =   1695
       End
       Begin VB.OptionButton Option2 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "Option2"
          Height          =   255
          Left            =   3240
@@ -219,7 +222,7 @@ Begin VB.Form Server
          Width           =   255
       End
       Begin VB.OptionButton Option1 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "Option1"
          Height          =   195
          Left            =   1680
@@ -282,7 +285,7 @@ Begin VB.Form Server
          Width           =   1815
       End
       Begin VB.Label lb_B 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "BORROW"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -445,7 +448,7 @@ Begin VB.Form Server
       End
    End
    Begin VB.Frame fr_Re 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H0080C0FF&
       Caption         =   "RETURN A BOOK"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -577,6 +580,7 @@ Begin VB.Form Server
          Width           =   1575
       End
       Begin VB.CommandButton co_Return 
+         BackColor       =   &H0000C000&
          Caption         =   "RETURN"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -589,12 +593,13 @@ Begin VB.Form Server
          EndProperty
          Height          =   495
          Left            =   5400
+         Style           =   1  'Graphical
          TabIndex        =   28
          Top             =   4320
          Width           =   1455
       End
       Begin VB.Label lb_Idbr 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "ID OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -612,7 +617,7 @@ Begin VB.Form Server
          Width           =   1935
       End
       Begin VB.Label lb_Idur 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "ID OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -630,7 +635,7 @@ Begin VB.Form Server
          Width           =   1935
       End
       Begin VB.Label lb_F 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "FINE TO BE PAID :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -648,7 +653,7 @@ Begin VB.Form Server
          Width           =   2055
       End
       Begin VB.Label lb_Dr 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "DATE OF RETURN :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -666,7 +671,7 @@ Begin VB.Form Server
          Width           =   2175
       End
       Begin VB.Label lb_Nbr 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "NAME OF THE BOOK :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -684,7 +689,7 @@ Begin VB.Form Server
          Width           =   2295
       End
       Begin VB.Label lb_Nur 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "NAME OF THE USER :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -702,7 +707,7 @@ Begin VB.Form Server
          Width           =   2295
       End
       Begin VB.Label lb_Rid 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "ISSUE ID :"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -721,7 +726,7 @@ Begin VB.Form Server
       End
    End
    Begin VB.Frame fr_Cur 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H0080C0FF&
       Caption         =   "CURRENTLY READING"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -738,7 +743,7 @@ Begin VB.Form Server
       Top             =   600
       Width           =   14175
       Begin MSDataGridLib.DataGrid Dg_cr 
-         Bindings        =   "Server.frx":0000
+         Bindings        =   "Server.frx":2C513
          Height          =   1815
          Left            =   240
          TabIndex        =   38
@@ -808,6 +813,9 @@ Begin VB.Form Server
       Begin VB.Menu mn_Fd 
          Caption         =   "Fine Details"
       End
+      Begin VB.Menu mn_A 
+         Caption         =   "About"
+      End
       Begin VB.Menu mn_E 
          Caption         =   "Exit"
       End
@@ -830,10 +838,6 @@ Begin VB.Form Server
       End
       Begin VB.Menu mn_Ub 
          Caption         =   "View Users Who Borrowed"
-      End
-      Begin VB.Menu mn_F 
-         Caption         =   "View Users Whose Fines are Due"
-         Shortcut        =   ^F
       End
    End
 End
@@ -963,6 +967,10 @@ With Dg_cr
     .Columns(5).Visible = False
 End With
 
+End Sub
+
+Private Sub mn_A_Click()
+About.Show
 End Sub
 
 Private Sub mn_B_Click()

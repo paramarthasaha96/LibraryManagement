@@ -6,10 +6,12 @@ Begin VB.Form Fine_Details
    ClientTop       =   3480
    ClientWidth     =   6210
    LinkTopic       =   "Form1"
+   Picture         =   "Fine_Details.frx":0000
    ScaleHeight     =   3435
    ScaleWidth      =   6210
    Begin VB.Label Label1 
-      Caption         =   $"Fine_Details.frx":0000
+      BackColor       =   &H0080C0FF&
+      Caption         =   $"Fine_Details.frx":2C513
       BeginProperty Font 
          Name            =   "Britannic Bold"
          Size            =   12
@@ -26,6 +28,7 @@ Begin VB.Form Fine_Details
       Width           =   5655
    End
    Begin VB.Label Fd_hd 
+      BackColor       =   &H0080C0FF&
       Caption         =   "Fine Calculation Procedure"
       BeginProperty Font 
          Name            =   "Britannic Bold"

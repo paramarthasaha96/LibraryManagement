@@ -18,6 +18,7 @@ Begin VB.Form View_User
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form1"
+   Picture         =   "View_User.frx":0000
    ScaleHeight     =   6075
    ScaleWidth      =   10455
    Begin MSAdodcLib.Adodc Adodc1 
@@ -68,7 +69,7 @@ Begin VB.Form View_User
       _Version        =   393216
    End
    Begin VB.Frame fr_uv 
-      BackColor       =   &H00FFC0C0&
+      BackColor       =   &H0080C0FF&
       Caption         =   "LIST OF USERS"
       BeginProperty Font 
          Name            =   "Britannic Bold"
@@ -85,6 +86,7 @@ Begin VB.Form View_User
       Top             =   360
       Width           =   9375
       Begin VB.CommandButton co_S 
+         BackColor       =   &H0000C000&
          Caption         =   "SEARCH"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -97,12 +99,13 @@ Begin VB.Form View_User
          EndProperty
          Height          =   495
          Left            =   7680
+         Style           =   1  'Graphical
          TabIndex        =   8
          Top             =   720
          Width           =   1455
       End
       Begin VB.OptionButton op_All 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "SHOW ALL"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -154,7 +157,7 @@ Begin VB.Form View_User
          Width           =   1935
       End
       Begin VB.OptionButton op_uid 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "USER-ID"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -172,7 +175,7 @@ Begin VB.Form View_User
          Width           =   1335
       End
       Begin VB.OptionButton op_name 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "NAME"
          BeginProperty Font 
             Name            =   "Britannic Bold"
@@ -190,7 +193,7 @@ Begin VB.Form View_User
          Width           =   975
       End
       Begin MSDataGridLib.DataGrid uv_dg 
-         Bindings        =   "View_User.frx":0000
+         Bindings        =   "View_User.frx":47518
          Height          =   2895
          Left            =   240
          TabIndex        =   2
@@ -257,7 +260,7 @@ Begin VB.Form View_User
          EndProperty
       End
       Begin VB.Label Label1 
-         BackColor       =   &H00FFC0C0&
+         BackColor       =   &H0080C0FF&
          Caption         =   "VIEW BY:"
          BeginProperty Font 
             Name            =   "Britannic Bold"
