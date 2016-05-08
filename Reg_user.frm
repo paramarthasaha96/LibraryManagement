@@ -10,7 +10,6 @@ Begin VB.Form Reg_user
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   Picture         =   "Reg_user.frx":0000
    ScaleHeight     =   4230
    ScaleWidth      =   6795
    StartUpPosition =   3  'Windows Default
@@ -209,6 +208,7 @@ Private Sub co_Register_Click()
 End Sub
 
 Private Sub Form_Load()
+Reg_user.Picture = LoadPicture("8e4a924b-4668-4630-94dc-51b0cdc6de30.jpg")
 Adodc1.Recordset.AddNew
 End Sub
 

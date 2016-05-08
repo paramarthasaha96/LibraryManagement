@@ -11,7 +11,6 @@ Begin VB.Form Server
    FillStyle       =   0  'Solid
    FontTransparent =   0   'False
    LinkTopic       =   "Form1"
-   Picture         =   "Server.frx":0000
    ScaleHeight     =   8580
    ScaleWidth      =   14910
    StartUpPosition =   3  'Windows Default
@@ -743,7 +742,7 @@ Begin VB.Form Server
       Top             =   600
       Width           =   14175
       Begin MSDataGridLib.DataGrid Dg_cr 
-         Bindings        =   "Server.frx":2C513
+         Bindings        =   "Server.frx":0000
          Height          =   1815
          Left            =   240
          TabIndex        =   38
@@ -909,6 +908,7 @@ End With
 End Sub
 
 Private Sub Form_Load()
+Server.Picture = LoadPicture("library-books-shelves-1366x768-54712.jpg")
 Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc1.CommandType = adCmdText
 Adodc1.RecordSource = "select distinct ID,EMAIL,NAME,AGE from Users"

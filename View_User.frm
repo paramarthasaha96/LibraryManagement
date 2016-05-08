@@ -18,7 +18,6 @@ Begin VB.Form View_User
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form1"
-   Picture         =   "View_User.frx":0000
    ScaleHeight     =   6075
    ScaleWidth      =   10455
    Begin MSAdodcLib.Adodc Adodc1 
@@ -193,7 +192,7 @@ Begin VB.Form View_User
          Width           =   975
       End
       Begin MSDataGridLib.DataGrid uv_dg 
-         Bindings        =   "View_User.frx":47518
+         Bindings        =   "View_User.frx":0000
          Height          =   2895
          Left            =   240
          TabIndex        =   2
@@ -317,6 +316,7 @@ End With
 End Sub
 
 Private Sub Form_Load()
+View_User.Picture = LoadPicture("8e4a924b-4668-4630-94dc-51b0cdc6de30.jpg")
 Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc1.CommandType = adCmdText
 Adodc1.RecordSource = "select distinct ID,EMAIL,NAME,AGE from Users"

@@ -159,3 +159,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub Form_Load()
+About.Picture = LoadPicture("library-books-shelves-1366x768-54712.jpg")
+End Sub

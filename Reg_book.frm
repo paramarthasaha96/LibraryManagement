@@ -10,7 +10,6 @@ Begin VB.Form Reg_book
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   Picture         =   "Reg_book.frx":0000
    ScaleHeight     =   5400
    ScaleWidth      =   6885
    StartUpPosition =   3  'Windows Default
@@ -102,9 +101,9 @@ Begin VB.Form Reg_book
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      ItemData        =   "Reg_book.frx":666AE
+      ItemData        =   "Reg_book.frx":0000
       Left            =   2040
-      List            =   "Reg_book.frx":666C4
+      List            =   "Reg_book.frx":0016
       Style           =   2  'Dropdown List
       TabIndex        =   7
       Top             =   2160
@@ -256,6 +255,7 @@ Private Sub co_Register_Click()
 End Sub
 
 Private Sub Form_Load()
+Reg_book.Picture = LoadPicture("8e4a924b-4668-4630-94dc-51b0cdc6de30.jpg")
 Adodc1.Recordset.AddNew
 cb_Cat.ListIndex = 0
 txt_Tmp.Text = cb_Cat.List(0)

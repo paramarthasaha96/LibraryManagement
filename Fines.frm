@@ -18,7 +18,6 @@ Begin VB.Form View_Br
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form1"
-   Picture         =   "Fines.frx":0000
    ScaleHeight     =   6495
    ScaleWidth      =   11385
    StartUpPosition =   3  'Windows Default
@@ -298,7 +297,7 @@ Begin VB.Form View_Br
       Top             =   2040
       Width           =   10695
       Begin MSDataGridLib.DataGrid dg_brw 
-         Bindings        =   "Fines.frx":406B8
+         Bindings        =   "Fines.frx":0000
          Height          =   3015
          Left            =   240
          TabIndex        =   1
@@ -411,6 +410,7 @@ End With
 End Sub
 
 Private Sub Form_Load()
+View_Br.Picture = LoadPicture("d62adb47b8448468ce8a8f8bfaf9af9a.jpg")
 op_All.Value = True
 Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc1.CommandType = adCmdText

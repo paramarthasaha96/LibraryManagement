@@ -18,7 +18,6 @@ Begin VB.Form View_Books
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form1"
-   Picture         =   "View_Books.frx":0000
    ScaleHeight     =   5985
    ScaleWidth      =   10710
    Begin MSAdodcLib.Adodc Adodc1 
@@ -264,7 +263,7 @@ Begin VB.Form View_Books
          Width           =   1455
       End
       Begin MSDataGridLib.DataGrid bv_dg 
-         Bindings        =   "View_Books.frx":46114
+         Bindings        =   "View_Books.frx":0000
          Height          =   3375
          Left            =   480
          TabIndex        =   1
@@ -400,6 +399,7 @@ End With
 End Sub
 
 Private Sub Form_Load()
+View_Books.Picture = LoadPicture("Old_Book_Spines.pngced84352-d6c9-45d1-bb61-443f32b447f0Original.jpg")
 Adodc1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data source=LIBDATABASE.mdb;"
 Adodc1.CommandType = adCmdText
 Adodc1.RecordSource = "select distinct ID,NAME,AUTHOR,CATEGORY,QUANTITY from Books"

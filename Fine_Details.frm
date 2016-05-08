@@ -6,12 +6,11 @@ Begin VB.Form Fine_Details
    ClientTop       =   3480
    ClientWidth     =   6210
    LinkTopic       =   "Form1"
-   Picture         =   "Fine_Details.frx":0000
    ScaleHeight     =   3435
    ScaleWidth      =   6210
    Begin VB.Label Label1 
       BackColor       =   &H0080C0FF&
-      Caption         =   $"Fine_Details.frx":2C513
+      Caption         =   $"Fine_Details.frx":0000
       BeginProperty Font 
          Name            =   "Britannic Bold"
          Size            =   12
@@ -51,3 +50,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub Form_Load()
+Fine_Details.Picture = LoadPicture("library-books-shelves-1366x768-54712.jpg")
+End Sub
